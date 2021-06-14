@@ -17,14 +17,13 @@ const Annotation = ({xScale, yScale, chartRef, data, margin}) => {
 
     if (left < chartLeft + margin.left) {
       left = chartLeft + margin.left
-      console.log(2312312)
     }
 
 
     setDivStyle({
       top,
       left,
-      visibility: 'visible'
+      opacity: 1
     })
   }, [])
 

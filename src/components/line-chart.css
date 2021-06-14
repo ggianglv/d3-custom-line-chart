@@ -59,6 +59,8 @@
   display: inline-block;
   border-radius: 2px;
   font-size: 14px;
+  transition: opacity 0.5s linear;
+  opacity: 0;
 }
 
 
