@@ -1,7 +1,5 @@
 .line {
   fill: none;
-  stroke: #ffab00;
-  stroke-width: 3;
 }
 
 .overlay {
@@ -11,7 +9,6 @@
 
 /* Style the dots by assigning a fill and stroke */
 .dot {
-  fill: #ffab00;
   stroke: #fff;
 }
 
@@ -21,6 +18,7 @@
 }
 
 .chart-tooltip {
+  z-index: 5;
   position: fixed;
   padding: 5px 10px;
   border: 1px solid #777;
@@ -43,6 +41,24 @@
 .chart-tooltip .property .label {
   font-weight: 600;
   margin-right: 5px;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+  stroke-dasharray: 5;
+}
+
+.annotation-item {
+  z-index: 3;
+  position: fixed;
+  padding: 2px 5px;
+  background-color: #9593D8;
+  color: #fff;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 14px;
 }
 
 
