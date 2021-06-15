@@ -1,31 +1,34 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from "react";
 
-const Annotation = ({xScale, yScale, chartRef, data, margin, value}) => {
-  const divRef = useRef(null)
-  const [divStyle, setDivStyle] = useState({})
+const Annotation = ({ xScale, yScale, chartRef, data, margin, value }) => {
+  const divRef = useRef(null);
+  const [divStyle, setDivStyle] = useState({});
   useEffect(() => {
-    const {top: chartTop, left: chartLeft, right: chartRight} = chartRef.current.getBoundingClientRect()
-    const {width, height} = divRef.current.getBoundingClientRect()
-    const x = xScale(data.index)
-    const y = yScale(value)
-    let top = chartTop + y + margin.top - height - 10
-    let left = chartLeft + x + margin.left - width / 2
+    const {
+      top: chartTop,
+      left: chartLeft,
+      right: chartRight,
+    } = chartRef.current.getBoundingClientRect();
+    const { width, height } = divRef.current.getBoundingClientRect();
+    const x = xScale(data.index);
+    const y = yScale(value);
+    let top = chartTop + y + margin.top - height - 10;
+    let left = chartLeft + x + margin.left - width / 2;
 
     if (left + width + margin.left + margin.right > chartRight) {
-      left = chartRight - width - margin.left - margin.right - 5
+      left = chartRight - width - margin.left - margin.right - 5;
     }
 
     if (left < chartLeft + margin.left) {
-      left = chartLeft + margin.left
+      left = chartLeft + margin.left;
     }
-
 
     setDivStyle({
       top,
       left,
-      opacity: 1
-    })
-  }, [])
+      opacity: 1,
+    });
+  }, []);
 
   return (
     <div ref={divRef} style={divStyle} className="annotation-item">

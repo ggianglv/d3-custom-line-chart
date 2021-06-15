@@ -54,7 +54,7 @@
   z-index: 3;
   position: fixed;
   padding: 2px 5px;
-  background-color: #9593D8;
+  background-color: #9593d8;
   color: #fff;
   display: inline-block;
   border-radius: 2px;
@@ -62,5 +62,3 @@
   transition: opacity 0.5s linear;
   opacity: 0;
 }
-
-
