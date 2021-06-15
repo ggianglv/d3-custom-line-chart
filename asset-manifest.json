@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/d3-custom-line-chart/static/css/main.dc91e63b.chunk.css",
-    "main.js": "/d3-custom-line-chart/static/js/main.1be089e1.chunk.js",
-    "main.js.map": "/d3-custom-line-chart/static/js/main.1be089e1.chunk.js.map",
-    "runtime-main.js": "/d3-custom-line-chart/static/js/runtime-main.0b2c3af5.js",
-    "runtime-main.js.map": "/d3-custom-line-chart/static/js/runtime-main.0b2c3af5.js.map",
-    "static/js/2.0184a281.chunk.js": "/d3-custom-line-chart/static/js/2.0184a281.chunk.js",
-    "static/js/2.0184a281.chunk.js.map": "/d3-custom-line-chart/static/js/2.0184a281.chunk.js.map",
-    "static/js/3.a99920d7.chunk.js": "/d3-custom-line-chart/static/js/3.a99920d7.chunk.js",
-    "static/js/3.a99920d7.chunk.js.map": "/d3-custom-line-chart/static/js/3.a99920d7.chunk.js.map",
+    "main.css": "/d3-custom-line-chart/static/css/main.969a6c1b.chunk.css",
+    "main.js": "/d3-custom-line-chart/static/js/main.920bc944.chunk.js",
+    "main.js.map": "/d3-custom-line-chart/static/js/main.920bc944.chunk.js.map",
+    "runtime-main.js": "/d3-custom-line-chart/static/js/runtime-main.5fd852be.js",
+    "runtime-main.js.map": "/d3-custom-line-chart/static/js/runtime-main.5fd852be.js.map",
+    "static/js/2.594237a7.chunk.js": "/d3-custom-line-chart/static/js/2.594237a7.chunk.js",
+    "static/js/2.594237a7.chunk.js.map": "/d3-custom-line-chart/static/js/2.594237a7.chunk.js.map",
+    "static/js/3.bbcd8407.chunk.js": "/d3-custom-line-chart/static/js/3.bbcd8407.chunk.js",
+    "static/js/3.bbcd8407.chunk.js.map": "/d3-custom-line-chart/static/js/3.bbcd8407.chunk.js.map",
     "index.html": "/d3-custom-line-chart/index.html",
-    "static/css/main.dc91e63b.chunk.css.map": "/d3-custom-line-chart/static/css/main.dc91e63b.chunk.css.map",
-    "static/js/2.0184a281.chunk.js.LICENSE.txt": "/d3-custom-line-chart/static/js/2.0184a281.chunk.js.LICENSE.txt"
+    "static/css/main.969a6c1b.chunk.css.map": "/d3-custom-line-chart/static/css/main.969a6c1b.chunk.css.map",
+    "static/js/2.594237a7.chunk.js.LICENSE.txt": "/d3-custom-line-chart/static/js/2.594237a7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b2c3af5.js",
-    "static/js/2.0184a281.chunk.js",
-    "static/css/main.dc91e63b.chunk.css",
-    "static/js/main.1be089e1.chunk.js"
+    "static/js/runtime-main.5fd852be.js",
+    "static/js/2.594237a7.chunk.js",
+    "static/css/main.969a6c1b.chunk.css",
+    "static/js/main.920bc944.chunk.js"
   ]
 }
