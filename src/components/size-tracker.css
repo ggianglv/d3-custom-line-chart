@@ -1,0 +1,12 @@
+.div-size-tracker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.div-size-tracker-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

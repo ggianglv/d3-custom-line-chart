@@ -10,11 +10,14 @@ const TOOLTIP_HEIGHT = 46;
 const LineChart = ({ data, lines, width, height, annotations }) => {
   const chartRef = useRef(null);
   const tooltipRef = useRef(null);
+  const [renderKey, setRenderKey] = useState(1);
   const [tooltip, setTooltip] = useState(null);
 
   useEffect(() => {
+    d3.select(chartRef.current).selectAll("*").remove();
+    setRenderKey(renderKey + 1);
     renderChart();
-  }, []);
+  }, [width, height, data, lines, annotations]);
 
   const getMax = () => {
     const arr = [];
@@ -63,8 +66,6 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
   const renderChart = () => {
     const svg = d3
       .select(chartRef.current)
-      .attr("width", chartWidth + margin.left + margin.right)
-      .attr("height", chartHeight + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -167,7 +168,7 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
 
       {annotations.map((item, index) => (
         <Annotation
-          key={index}
+          key={`${index}_${renderKey}`} //Mount chart when data
           chartRef={chartRef}
           value={data[item.index][item.key]}
           data={item}

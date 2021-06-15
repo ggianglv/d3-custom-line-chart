@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import LineChart from "./components/LineChart";
+import SizeTracker from "./components/SizeTracker";
 
 function App() {
   const data = [
@@ -57,31 +58,35 @@ function App() {
       key: "uv",
       index: 0,
       annotation: "First annotation",
-      color: '#8884d8'
+      color: "#8884d8",
     },
     {
       key: "uv",
       index: 6,
       annotation: "Last annotaion",
-      color: '#8884d8'
+      color: "#8884d8",
     },
     {
       key: "pv",
       index: 2,
       annotation: "This is test",
-      color: '#82ca9d'
+      color: "#82ca9d",
     },
   ];
 
   return (
     <div className="App">
-      <LineChart
-        lines={lines}
-        data={data}
-        width={800}
-        height={400}
-        annotations={annotations}
-      />
+      <SizeTracker>
+        {(width, height) => (
+          <LineChart
+            lines={lines}
+            data={data}
+            width={width}
+            height={height}
+            annotations={annotations}
+          />
+        )}
+      </SizeTracker>
     </div>
   );
 }
