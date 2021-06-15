@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/d3-custom-line-chart/static/css/main.ed210cf7.chunk.css",
-    "main.js": "/d3-custom-line-chart/static/js/main.474c5af0.chunk.js",
-    "main.js.map": "/d3-custom-line-chart/static/js/main.474c5af0.chunk.js.map",
+    "main.css": "/d3-custom-line-chart/static/css/main.dc91e63b.chunk.css",
+    "main.js": "/d3-custom-line-chart/static/js/main.1be089e1.chunk.js",
+    "main.js.map": "/d3-custom-line-chart/static/js/main.1be089e1.chunk.js.map",
     "runtime-main.js": "/d3-custom-line-chart/static/js/runtime-main.0b2c3af5.js",
     "runtime-main.js.map": "/d3-custom-line-chart/static/js/runtime-main.0b2c3af5.js.map",
     "static/js/2.0184a281.chunk.js": "/d3-custom-line-chart/static/js/2.0184a281.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.a99920d7.chunk.js": "/d3-custom-line-chart/static/js/3.a99920d7.chunk.js",
     "static/js/3.a99920d7.chunk.js.map": "/d3-custom-line-chart/static/js/3.a99920d7.chunk.js.map",
     "index.html": "/d3-custom-line-chart/index.html",
-    "static/css/main.ed210cf7.chunk.css.map": "/d3-custom-line-chart/static/css/main.ed210cf7.chunk.css.map",
+    "static/css/main.dc91e63b.chunk.css.map": "/d3-custom-line-chart/static/css/main.dc91e63b.chunk.css.map",
     "static/js/2.0184a281.chunk.js.LICENSE.txt": "/d3-custom-line-chart/static/js/2.0184a281.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0b2c3af5.js",
     "static/js/2.0184a281.chunk.js",
-    "static/css/main.ed210cf7.chunk.css",
-    "static/js/main.474c5af0.chunk.js"
+    "static/css/main.dc91e63b.chunk.css",
+    "static/js/main.1be089e1.chunk.js"
   ]
 }
