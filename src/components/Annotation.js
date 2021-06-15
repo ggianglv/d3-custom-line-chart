@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-const Annotation = ({xScale, yScale, chartRef, data, margin}) => {
+const Annotation = ({xScale, yScale, chartRef, data, margin, value}) => {
   const divRef = useRef(null)
   const [divStyle, setDivStyle] = useState({})
   useEffect(() => {
     const {top: chartTop, left: chartLeft, right: chartRight} = chartRef.current.getBoundingClientRect()
     const {width, height} = divRef.current.getBoundingClientRect()
     const x = xScale(data.index)
-    const y = yScale(data.clicks)
+    const y = yScale(value)
     let top = chartTop + y + margin.top - height - 10
     let left = chartLeft + x + margin.left - width / 2
 
@@ -26,10 +26,6 @@ const Annotation = ({xScale, yScale, chartRef, data, margin}) => {
       opacity: 1
     })
   }, [])
-
-  const getAnnotationStyle = () => {
-
-  }
 
   return (
     <div ref={divRef} style={divStyle} className="annotation-item">
