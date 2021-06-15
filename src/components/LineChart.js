@@ -5,6 +5,7 @@ import "./line-chart.css";
 import Annotation from "./Annotation";
 
 const TICKS = 4;
+const TOOLTIP_HEIGHT = 46;
 
 const LineChart = ({ data, lines, width, height, annotations }) => {
   const chartRef = useRef(null);
@@ -22,9 +23,8 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
         arr.push(item[line.key]);
       });
     });
-    const max = Math.max(...arr);
 
-    return max;
+    return Math.max(...arr);
   };
 
   const margin = { top: 50, right: 50, bottom: 50, left: 50 };
@@ -45,13 +45,12 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
     const value = tooltip[tooltip.key];
     const { left: chartLeft, top: chartTop } =
       chartRef.current.getBoundingClientRect();
-    const { width: tooltipWidth, height: tooltipHeight } =
-      tooltipRef.current.getBoundingClientRect();
+    const { width: tooltipWidth } = tooltipRef.current.getBoundingClientRect();
     let left =
       chartLeft + xScale(tooltip.index) + margin.left - tooltipWidth / 2;
-    let top = chartTop + yScale(value) + margin.top - tooltipHeight - 10;
+    let top = chartTop + yScale(value) + margin.top - TOOLTIP_HEIGHT - 10;
     if (top < chartTop) {
-      top = chartTop + yScale(value) + tooltipHeight + 10;
+      top = chartTop + yScale(value) + TOOLTIP_HEIGHT + 10;
     }
 
     return {
@@ -64,7 +63,6 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
   const renderChart = () => {
     const svg = d3
       .select(chartRef.current)
-      .append("svg")
       .attr("width", chartWidth + margin.left + margin.right)
       .attr("height", chartHeight + margin.top + margin.bottom)
       .append("g")
@@ -153,17 +151,17 @@ const LineChart = ({ data, lines, width, height, annotations }) => {
 
   return (
     <div>
-      <div ref={chartRef} />
+      <svg
+        width={chartWidth + margin.left + margin.right}
+        height={chartHeight + margin.top + margin.bottom}
+        ref={chartRef}
+      />
 
       <div ref={tooltipRef} style={tooltipStyle} className="chart-tooltip">
-        <div className="date">15/10/2020</div>
+        <div className="date">{tooltip?.date || ""}</div>
         <div className="property">
-          <span className="label">URL:</span>
-          <span className="value">http://google.com</span>
-        </div>
-        <div className="property">
-          <span className="label">Clicks:</span>
-          <span className="value">{tooltip?.clicks}</span>
+          <span className="label">{tooltip?.key}: </span>
+          <span className="value">{tooltip?.[tooltip?.key]}</span>
         </div>
       </div>
 

@@ -57,16 +57,19 @@ function App() {
       key: "uv",
       index: 0,
       annotation: "First annotation",
+      color: '#8884d8'
     },
     {
       key: "uv",
       index: 6,
       annotation: "Last annotaion",
+      color: '#8884d8'
     },
     {
-      key: "uv",
+      key: "pv",
       index: 2,
       annotation: "This is test",
+      color: '#82ca9d'
     },
   ];
 

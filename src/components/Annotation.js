@@ -19,7 +19,7 @@ const Annotation = ({ xScale, yScale, chartRef, data, margin, value }) => {
     let left = chartLeft + x + margin.left - width / 2;
 
     if (left + width + margin.left + margin.right > chartRight) {
-      left = chartRight - width - margin.left - margin.right - 5;
+      left = chartRight - width - margin.right;
     }
 
     if (left < chartLeft + margin.left) {
@@ -30,6 +30,7 @@ const Annotation = ({ xScale, yScale, chartRef, data, margin, value }) => {
       top,
       left,
       opacity: 1,
+      backgroundColor: data.color,
     });
   }, []);
 
