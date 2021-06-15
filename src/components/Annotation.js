@@ -1,4 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Annotation = ({ xScale, yScale, chartRef, data, margin, value }) => {
   const divRef = useRef(null);
@@ -33,6 +36,11 @@ const Annotation = ({ xScale, yScale, chartRef, data, margin, value }) => {
   return (
     <div ref={divRef} style={divStyle} className="annotation-item">
       {data.annotation}
+
+      <div className="action">
+        <FontAwesomeIcon onClick={() => alert("edit")} icon={faEdit} />
+        <FontAwesomeIcon onClick={() => alert("delete")} icon={faTrashAlt} />
+      </div>
     </div>
   );
 };
